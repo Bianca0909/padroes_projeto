@@ -8,8 +8,13 @@ public class DataBase {
 
 	public static synchronized DataBase getInstance() {
 		if (dataBase == null) {
+			getConnection();
 			dataBase = new DataBase();
 		}
 		return dataBase;
+	}
+
+	public static void getConnection() {
+		System.out.println("Conectado!");
 	}
 }
