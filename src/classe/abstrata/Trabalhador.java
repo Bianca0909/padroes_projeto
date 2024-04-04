@@ -4,8 +4,9 @@ public class Trabalhador extends Pessoa {
 
 	private int empresaId;
 	
-	public Trabalhador(String nome, String sexo) {
+	public Trabalhador(String nome, String sexo, int empresaId) {
 		super(nome, sexo);
+		this.empresaId = empresaId;
 	}
 
 	public int getEmpresaId() {
@@ -18,8 +19,10 @@ public class Trabalhador extends Pessoa {
 
 	@Override
 	public void trabalha() {
-		
+		if (empresaId > 0) {
+			System.out.println("Empregado");
+		} else {
+			System.out.println("Desempregado");
+		}
 	}
-	
-
 }
